@@ -18,15 +18,17 @@
 ## Folder Model
 1. Buat File base.py (Menampung semua import seperti configuration.py)
 2. __init__.py (File yang pertamakali dieksekusi berisi db.bind(**db_settings.db_params) dan db.generate_mapping(create_tables=True) dan import semua class tabel db yang dibuat)
+3. Menjadikan UUID sebagai primary key id_user = PrimaryKey(uuid.UUID,default=uuid.uuid4)
 
 
 ## configuration.py
 1. From flask import Flask (Import Semua library yang dibutuhkan Flask)
 2. app = Flask(__name__) (Run aplikasi dari .env)
+3. Generate uuid myId = uuid.uuid4()
 
 ## main.py
 1. import flaskr.jwt (Import file jwt pada folder flaskr )
 
 ## flaskr
 ### jwt.py
-1. 
+1. Mengambil uuid pada file configuration.py
